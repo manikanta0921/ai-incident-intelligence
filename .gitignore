@@ -1,0 +1,31 @@
+# Build output
+target/
+build/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files - NEVER commit real secrets
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+
+# Hibernate auto-generated schema (dev artifact)
+*schema.sql

@@ -1,0 +1,16 @@
+# Local development database only. Run with: docker compose up -d
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: incident-postgres
+    environment:
+      POSTGRES_DB: incident_db
+      POSTGRES_USER: incident_user
+      POSTGRES_PASSWORD: incident_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - incident-pgdata:/var/lib/postgresql/data
+
+volumes:
+  incident-pgdata:

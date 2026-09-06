@@ -1,0 +1,20 @@
+# Normalize line endings: LF in the repo, checked out per-OS by git
+* text=auto
+
+# Source code
+*.java text
+*.xml text
+*.yml text
+*.yaml text
+*.md text
+*.properties text
+*.sql text
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary assets
+*.jar binary
+*.png binary
+*.jpg binary

@@ -5,8 +5,8 @@ spring:
   datasource:
     # Sensitive/environment-specific values come from environment variables (see .env.example)
     url: ${DB_URL:jdbc:postgresql://localhost:5432/incident_db}
-    username: ${DB_USERNAME:incident_user}
-    password: ${DB_PASSWORD:incident_pass}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:root}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10

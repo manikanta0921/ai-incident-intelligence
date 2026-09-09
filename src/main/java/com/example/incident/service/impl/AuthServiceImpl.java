@@ -1,5 +1,17 @@
 package com.example.incident.service.impl;
 
+import java.time.Instant;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.example.incident.dto.auth.AuthResponse;
 import com.example.incident.dto.auth.LoginRequest;
 import com.example.incident.dto.auth.MessageResponse;
@@ -14,17 +26,6 @@ import com.example.incident.repository.UserRepository;
 import com.example.incident.security.JwtProperties;
 import com.example.incident.security.JwtService;
 import com.example.incident.service.AuthService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.time.Instant;
 
 /**
  * Implements the three authentication flows.

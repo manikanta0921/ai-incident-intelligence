@@ -1,5 +1,14 @@
 package com.example.incident.service.impl;
 
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.example.incident.dto.user.UserResponse;
 import com.example.incident.entity.User;
 import com.example.incident.entity.User.Role;
@@ -8,14 +17,6 @@ import com.example.incident.exception.ResourceNotFoundException;
 import com.example.incident.repository.UserRepository;
 import com.example.incident.service.AuthService;
 import com.example.incident.service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 /**
  * ADMIN-facing user management.

@@ -1,12 +1,13 @@
 package com.example.incident.security;
 
-import com.example.incident.entity.User.Role;
+import java.util.Collection;
+import java.util.List;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
-import java.util.List;
+import com.example.incident.entity.User.Role;
 
 /**
  * Our own UserDetails implementation. Unlike the generic Spring one, it also

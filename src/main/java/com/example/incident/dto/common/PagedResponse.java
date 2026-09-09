@@ -1,10 +1,11 @@
 package com.example.incident.dto.common;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import org.springframework.data.domain.Page;
-
 import java.util.List;
 import java.util.function.Function;
+
+import org.springframework.data.domain.Page;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Stable pagination envelope around Spring's Page.

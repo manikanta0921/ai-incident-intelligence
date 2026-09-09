@@ -1,10 +1,11 @@
 package com.example.incident.service;
 
-import com.example.incident.dto.user.UserResponse;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.Optional;
+import com.example.incident.dto.user.UserResponse;
 
 /**
  * User management contract (ADMIN-facing).

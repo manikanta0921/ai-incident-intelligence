@@ -1,20 +1,5 @@
 package com.example.incident.controller;
 
-import com.example.incident.dto.common.PagedResponse;
-import com.example.incident.dto.incident.IncidentRequest;
-import com.example.incident.dto.incident.IncidentResponse;
-import com.example.incident.dto.incident.IncidentStatusUpdateRequest;
-import com.example.incident.dto.incident.IncidentUpdateRequest;
-import com.example.incident.entity.IncidentCategory;
-import com.example.incident.entity.IncidentSeverity;
-import com.example.incident.entity.IncidentStatus;
-import com.example.incident.security.CustomUserDetails;
-import com.example.incident.service.IncidentService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -32,6 +17,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.incident.dto.common.PagedResponse;
+import com.example.incident.dto.incident.IncidentRequest;
+import com.example.incident.dto.incident.IncidentResponse;
+import com.example.incident.dto.incident.IncidentStatusUpdateRequest;
+import com.example.incident.dto.incident.IncidentUpdateRequest;
+import com.example.incident.entity.IncidentCategory;
+import com.example.incident.entity.IncidentSeverity;
+import com.example.incident.entity.IncidentStatus;
+import com.example.incident.security.CustomUserDetails;
+import com.example.incident.service.IncidentService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 /**
  * Incident REST endpoints. This class deliberately contains no business logic:

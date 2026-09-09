@@ -1,14 +1,5 @@
 package com.example.incident.controller;
 
-import com.example.incident.dto.auth.AuthResponse;
-import com.example.incident.dto.auth.LoginRequest;
-import com.example.incident.dto.auth.MessageResponse;
-import com.example.incident.dto.auth.RefreshTokenRequest;
-import com.example.incident.dto.auth.RegisterRequest;
-import com.example.incident.service.AuthService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +7,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.incident.dto.auth.AuthResponse;
+import com.example.incident.dto.auth.LoginRequest;
+import com.example.incident.dto.auth.MessageResponse;
+import com.example.incident.dto.auth.RefreshTokenRequest;
+import com.example.incident.dto.auth.RegisterRequest;
+import com.example.incident.service.AuthService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 /**
  * Public authentication endpoints. No JWT required (see SecurityConfig permitAll).

@@ -1,8 +1,9 @@
 package com.example.incident.util;
 
-import com.example.incident.security.CustomUserDetails;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+
+import com.example.incident.security.CustomUserDetails;
 
 /**
  * Static helper for reading the authenticated caller inside services.

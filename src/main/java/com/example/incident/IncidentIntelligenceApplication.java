@@ -1,11 +1,12 @@
 package com.example.incident;
 
-import com.example.incident.config.CorsProperties;
-import com.example.incident.security.JwtProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.scheduling.annotation.EnableScheduling;
+
+import com.example.incident.config.CorsProperties;
+import com.example.incident.security.JwtProperties;
 
 /**
  * Entry point of the AI Incident Intelligence backend.

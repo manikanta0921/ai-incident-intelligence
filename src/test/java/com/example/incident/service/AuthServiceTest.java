@@ -1,19 +1,15 @@
 package com.example.incident.service;
 
-import com.example.incident.dto.auth.AuthResponse;
-import com.example.incident.dto.auth.LoginRequest;
-import com.example.incident.dto.auth.MessageResponse;
-import com.example.incident.dto.auth.RefreshTokenRequest;
-import com.example.incident.dto.auth.RegisterRequest;
-import com.example.incident.entity.RefreshToken;
-import com.example.incident.entity.User;
-import com.example.incident.exception.BusinessException;
-import com.example.incident.exception.InvalidTokenException;
-import com.example.incident.repository.RefreshTokenRepository;
-import com.example.incident.repository.UserRepository;
-import com.example.incident.security.JwtProperties;
-import com.example.incident.security.JwtService;
-import com.example.incident.service.impl.AuthServiceImpl;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Optional;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -28,16 +24,20 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.time.Duration;
-import java.time.Instant;
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import com.example.incident.dto.auth.AuthResponse;
+import com.example.incident.dto.auth.LoginRequest;
+import com.example.incident.dto.auth.MessageResponse;
+import com.example.incident.dto.auth.RefreshTokenRequest;
+import com.example.incident.dto.auth.RegisterRequest;
+import com.example.incident.entity.RefreshToken;
+import com.example.incident.entity.User;
+import com.example.incident.exception.BusinessException;
+import com.example.incident.exception.InvalidTokenException;
+import com.example.incident.repository.RefreshTokenRepository;
+import com.example.incident.repository.UserRepository;
+import com.example.incident.security.JwtProperties;
+import com.example.incident.security.JwtService;
+import com.example.incident.service.impl.AuthServiceImpl;
 
 /**
  * Unit tests for authentication flows. Everything external is mocked:

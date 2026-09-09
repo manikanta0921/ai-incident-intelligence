@@ -1,11 +1,14 @@
 package com.example.incident.service;
 
-import com.example.incident.dto.user.UserResponse;
-import com.example.incident.entity.User;
-import com.example.incident.exception.BusinessException;
-import com.example.incident.exception.ResourceNotFoundException;
-import com.example.incident.repository.UserRepository;
-import com.example.incident.service.impl.UserServiceImpl;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,14 +17,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import com.example.incident.dto.user.UserResponse;
+import com.example.incident.entity.User;
+import com.example.incident.exception.BusinessException;
+import com.example.incident.exception.ResourceNotFoundException;
+import com.example.incident.repository.UserRepository;
+import com.example.incident.service.impl.UserServiceImpl;
 
 /**
  * Authorization-related business rules of user management.

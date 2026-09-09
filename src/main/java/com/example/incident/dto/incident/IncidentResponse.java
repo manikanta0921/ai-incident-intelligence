@@ -1,12 +1,13 @@
 package com.example.incident.dto.incident;
 
+import java.time.Instant;
+
 import com.example.incident.entity.Incident;
 import com.example.incident.entity.IncidentCategory;
 import com.example.incident.entity.IncidentSeverity;
 import com.example.incident.entity.IncidentStatus;
-import io.swagger.v3.oas.annotations.media.Schema;
 
-import java.time.Instant;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * API representation of an incident. Entities never leave the service layer;

@@ -1,15 +1,16 @@
 package com.example.incident.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.data.jpa.domain.Specification;
+
 import com.example.incident.entity.Incident;
 import com.example.incident.entity.IncidentCategory;
 import com.example.incident.entity.IncidentSeverity;
 import com.example.incident.entity.IncidentStatus;
-import com.example.incident.entity.User;
-import jakarta.persistence.criteria.Predicate;
-import org.springframework.data.jpa.domain.Specification;
 
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.persistence.criteria.Predicate;
 
 /**
  * Reusable query fragments (the "Specification" pattern).

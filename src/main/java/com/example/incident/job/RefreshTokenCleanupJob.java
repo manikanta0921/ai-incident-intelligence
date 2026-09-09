@@ -1,13 +1,14 @@
 package com.example.incident.job;
 
-import com.example.incident.repository.RefreshTokenRepository;
+import java.time.Instant;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.Instant;
+import com.example.incident.repository.RefreshTokenRepository;
 
 /**
  * Housekeeping: removes refresh tokens that can never be used again.

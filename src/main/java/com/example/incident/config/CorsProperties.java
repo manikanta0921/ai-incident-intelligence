@@ -1,8 +1,8 @@
 package com.example.incident.config;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 import java.util.List;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * CORS origins for the future React frontend.

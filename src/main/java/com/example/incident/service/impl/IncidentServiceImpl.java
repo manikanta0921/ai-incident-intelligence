@@ -1,5 +1,18 @@
 package com.example.incident.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.example.incident.dto.incident.IncidentRequest;
 import com.example.incident.dto.incident.IncidentResponse;
 import com.example.incident.dto.incident.IncidentStatusUpdateRequest;
@@ -18,18 +31,6 @@ import com.example.incident.security.CustomUserDetails;
 import com.example.incident.service.IncidentService;
 import com.example.incident.service.IncidentSpecifications;
 import com.example.incident.util.SecurityUtils;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * All incident business rules live here. Controllers only translate HTTP;

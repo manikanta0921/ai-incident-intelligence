@@ -1,8 +1,5 @@
 package com.example.incident.config;
 
-import com.example.incident.security.JwtAuthenticationFilter;
-import com.example.incident.security.RestAccessDeniedHandler;
-import com.example.incident.security.RestAuthenticationEntryPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +13,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import com.example.incident.security.JwtAuthenticationFilter;
+import com.example.incident.security.RestAccessDeniedHandler;
+import com.example.incident.security.RestAuthenticationEntryPoint;
 
 /**
  * Modern Spring Security configuration (SecurityFilterChain - the deprecated

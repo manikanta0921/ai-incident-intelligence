@@ -1,15 +1,16 @@
 package com.example.incident.security;
 
-import com.example.incident.entity.User;
-import io.jsonwebtoken.Claims;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.Duration;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
-import java.util.Optional;
+import com.example.incident.entity.User;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import io.jsonwebtoken.Claims;
 
 /**
  * Real crypto, real tokens - JwtService is self-contained, so it is tested

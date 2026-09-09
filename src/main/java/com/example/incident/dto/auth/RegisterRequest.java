@@ -1,6 +1,7 @@
 package com.example.incident.dto.auth;
 
 import com.example.incident.entity.User.Role;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,10 +1,11 @@
 package com.example.incident.dto.user;
 
+import java.time.Instant;
+
 import com.example.incident.entity.User;
 import com.example.incident.entity.User.Role;
-import io.swagger.v3.oas.annotations.media.Schema;
 
-import java.time.Instant;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Public view of a user. Note: no password and no password hash.

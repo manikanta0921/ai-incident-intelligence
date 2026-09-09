@@ -1,8 +1,8 @@
 package com.example.incident.exception;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-
 import java.time.Instant;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Consistent error body for every failed request.

@@ -1,5 +1,8 @@
 package com.example.incident.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import com.example.incident.dto.incident.IncidentRequest;
 import com.example.incident.dto.incident.IncidentResponse;
 import com.example.incident.dto.incident.IncidentStatusUpdateRequest;
@@ -8,8 +11,6 @@ import com.example.incident.entity.IncidentCategory;
 import com.example.incident.entity.IncidentSeverity;
 import com.example.incident.entity.IncidentStatus;
 import com.example.incident.security.CustomUserDetails;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 /**
  * Incident business logic contract. The controller depends on this interface,

@@ -1,13 +1,7 @@
 package com.example.incident.controller;
 
-import com.example.incident.dto.common.PagedResponse;
-import com.example.incident.dto.user.RoleUpdateRequest;
-import com.example.incident.dto.user.UserResponse;
-import com.example.incident.exception.ResourceNotFoundException;
-import com.example.incident.service.UserService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
+import java.util.Optional;
+
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -22,7 +16,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
+import com.example.incident.dto.common.PagedResponse;
+import com.example.incident.dto.user.RoleUpdateRequest;
+import com.example.incident.dto.user.UserResponse;
+import com.example.incident.exception.ResourceNotFoundException;
+import com.example.incident.service.UserService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 /**
  * ADMIN-only user management (path also protected in SecurityConfig:

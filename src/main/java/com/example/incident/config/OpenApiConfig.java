@@ -1,13 +1,14 @@
 package com.example.incident.config;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * Swagger UI is served at /swagger-ui.html (redirects from /swagger-ui/index.html).
@@ -28,7 +29,7 @@ public class OpenApiConfig {
                         .description("""
                                 Incident management backend. In later phases AI will classify incidents, \
                                 suggest severity, summarize them and recommend resolutions.\
-                                
+
                                 1. POST /api/auth/register  - create an account\
                                 2. POST /api/auth/login     - get accessToken + refreshToken\
                                 3. Click "Authorize" below  - paste the accessToken\

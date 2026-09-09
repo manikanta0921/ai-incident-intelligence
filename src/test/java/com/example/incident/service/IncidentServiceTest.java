@@ -1,21 +1,15 @@
 package com.example.incident.service;
 
-import com.example.incident.dto.incident.IncidentRequest;
-import com.example.incident.dto.incident.IncidentResponse;
-import com.example.incident.dto.incident.IncidentStatusUpdateRequest;
-import com.example.incident.dto.incident.IncidentUpdateRequest;
-import com.example.incident.entity.Incident;
-import com.example.incident.entity.IncidentCategory;
-import com.example.incident.entity.IncidentSeverity;
-import com.example.incident.entity.IncidentStatus;
-import com.example.incident.entity.User;
-import com.example.incident.exception.BusinessException;
-import com.example.incident.exception.ResourceNotFoundException;
-import com.example.incident.repository.IncidentRepository;
-import com.example.incident.repository.UserRepository;
-import com.example.incident.security.CustomUserDetails;
-import com.example.incident.service.impl.IncidentServiceImpl;
-import com.example.incident.util.SecurityUtils;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.time.Instant;
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -34,15 +28,21 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import java.time.Instant;
-import java.util.List;
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import com.example.incident.dto.incident.IncidentRequest;
+import com.example.incident.dto.incident.IncidentResponse;
+import com.example.incident.dto.incident.IncidentStatusUpdateRequest;
+import com.example.incident.dto.incident.IncidentUpdateRequest;
+import com.example.incident.entity.Incident;
+import com.example.incident.entity.IncidentCategory;
+import com.example.incident.entity.IncidentSeverity;
+import com.example.incident.entity.IncidentStatus;
+import com.example.incident.entity.User;
+import com.example.incident.exception.BusinessException;
+import com.example.incident.exception.ResourceNotFoundException;
+import com.example.incident.repository.IncidentRepository;
+import com.example.incident.repository.UserRepository;
+import com.example.incident.security.CustomUserDetails;
+import com.example.incident.service.impl.IncidentServiceImpl;
 
 /**
  * Pure unit tests: the repository is mocked, no database, no Spring context.

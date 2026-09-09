@@ -1,14 +1,15 @@
 package com.example.incident.repository;
 
-import com.example.incident.entity.Incident;
-import com.example.incident.entity.IncidentCategory;
-import com.example.incident.entity.IncidentSeverity;
-import com.example.incident.entity.IncidentStatus;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.example.incident.entity.Incident;
+import com.example.incident.entity.IncidentCategory;
+import com.example.incident.entity.IncidentSeverity;
+import com.example.incident.entity.IncidentStatus;
 
 /**
  * Database access for incidents.
